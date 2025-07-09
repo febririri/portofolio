@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portofolio Febri</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: #f5eee6;
+      color: #3e2c18;
+    }
+    .navbar {
+      background: #3e2c18;
+      color: #fff;
+      display: flex;
+      justify-content: flex-end;
+      gap: 2.5rem;
+      font-size: 1.08rem;
+      padding: 1.2rem 2.5rem 1.2rem 2.5rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .navbar a:hover {
+      color: #e3bfa1;
+    }
+    .main-section {
+      max-width: 950px;
+      margin: 0 auto;
+      background: #fdf7ec;
+      border-radius: 18px;
+      box-shadow: 0 4px 32px #00000014;
+      overflow: hidden;
+      margin-top: 2.5rem;
+      position: relative;
+      border: 2.5px solid #bfa58a;
+    }
+    .top-area {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 2.5rem 2.5rem 1.5rem 2.5rem;
+      background: #fdf7ec;
+      border-bottom: 0;
+      align-items: center;
+    }
+    .profile-info {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .profile-info h1 {
+      font-size: 2.7rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin: 0 0 0.2em 0;
+      color: #3e2c18;
+    }
+    .profile-info h2 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin: 0 0 1.2em 0;
+      color: #3e2c18;
+      letter-spacing: 1px;
+    }
+    .profile-info .desc {
+      font-size: 1.07rem;
+      color: #3e2c18;
+      margin-bottom: 1.3em;
+      max-width: 440px;
+    }
+    .wave-divider {
+      display: block;
+      width: 100%;
+      height: 70px;
+      margin-top: -5px;
+      position: relative;
+      z-index: 1;
+    }
+    .about-area {
+      background: #3e2c18;
+      color: #fff;
+      padding: 2.2rem 2.5rem 2.2rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.3em;
+      position: relative;
+    }
+    .about-title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 0.5em;
+      color: #f5eee6;
+    }
+    .about-desc {
+      font-size: 1.08rem;
+      line-height: 1.7;
+      max-width: 700px;
+      color: #fff;
+    }
+    .edu-section {
+      background: #fdf7ec;
+      padding: 2.5rem;
+      border-bottom: 8px solid #3e2c18;
+    }
+    .edu-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #3e2c18;
+      margin-bottom: 1.2em;
+      letter-spacing: 2px;
+    }
+    .edu-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2em;
+    }
+    .edu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #e3cfa1;
+      padding-bottom: 0.6em;
+    }
+    .edu-item:last-child {
+      border-bottom: none;
+    }
+    .edu-major {
+      font-weight: 600;
+      color: #3e2c18;
+    }
+    .edu-school {
+      font-size: 0.97em;
+      color: #bfa58a;
+      margin-top: 0.2em;
+    }
+    .edu-date {
+      font-size: 0.94em;
+      color: #bfa58a;
+      font-weight: 500;
+      margin-top: 0.2em;
+      min-width: 105px;
+      text-align: right;
+    }
+    .skills-section {
+      background: #fdf7ec;
+      padding: 2.5rem;
+      border-bottom: 8px solid #3e2c18;
+    }
+    .skills-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #3e2c18;
+      margin-bottom: 1.2em;
+      letter-spacing: 2px;
+    }
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.1em 2.2em;
+      font-size: 1.07em;
+      color: #3e2c18;
+    }
+    .skills-list li {
+      background: #f5eee6;
+      border: 1.5px solid #bfa58a;
+      border-radius: 8px;
+      padding: 0.5em 1.2em;
+      margin-bottom: 0.3em;
+      list-style: none;
+      font-weight: 500;
+      letter-spacing: 1px;
+      box-shadow: 0 1px 5px #bfa58a22;
+    }
+    .project-section {
+      background: #fdf7ec;
+      padding: 2.5rem;
+      border-bottom: 8px solid #3e2c18;
+    }
+    .project-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #3e2c18;
+      margin-bottom: 1.2em;
+      letter-spacing: 2px;
+    }
+    .project-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.2rem;
+      margin-bottom: 0.7em;
+    }
+    .project-card {
+      width: 210px;
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 2px 12px #00000010;
+      border: 2px solid #bfa58a;
+      padding: 1.1em 1em 1.2em 1em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .project-card .proj-title {
+      font-size: 1.07em;
+      font-weight: 600;
+      color: #3e2c18;
+      margin-bottom: 0.4em;
+      text-align: center;
+    }
+    .project-card .proj-desc {
+      font-size: 0.97em;
+      color: #7c6a57;
+      text-align: center; /* Changed to center for consistent layout */
+    }
+    @media (max-width: 800px) {
+      .main-section, .project-section, .edu-section, .skills-section {
+        padding: 1.2rem;
+      }
+      .top-area, .about-area {
+        padding: 1.2rem;
+      }
+      .project-list, .skills-list {
+        justify-content: center;
+      }
+    }
+    @media (max-width: 600px) {
+      .main-section {
+        margin-top: 0.7rem;
+      }
+      .top-area {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.3rem;
+      }
+      .project-list, .skills-list {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="#about">Tentang</a>
+    <a href="#education">Pendidikan</a>
+    <a href="#skills">Skill</a>
+    <a href="#projects">Project</a>
+  </nav>
+  <div class="main-section">
+    <div class="top-area" id="about">
+      <div class="profile-info">
+        <h1>EKA FEBRIANTI</h1>
+        <h2>Siswa SMKN 1 Kota Bekasi - RPL</h2>
+        <div class="desc">
+          Hai, saya Eka, siswa Rekayasa Perangkat Lunak di SMKN 1 Kota Bekasi.
+        </div>
+      </div>
+    </div>
+    <svg class="wave-divider" viewBox="0 0 1440 100" preserveAspectRatio="none">
+      <path d="M0,40 C400,140 1040,-40 1440,60 L1440,100 L0,100 Z" fill="#3e2c18"/>
+    </svg>
+    <div class="about-area">
+      <div class="about-title">TENTANG SAYA</div>
+      <div class="about-desc">
+        Saya adalah siswa SMKN 1 Kota Bekasi jurusan RPL. Saya memiliki minat di bidang pengembangan web.<br><br>
+        Saya juga pernah membuat aplikasi skincare lokal memakai Laravel dan database, serta project undangan digital dengan PHP native menggunakan Laragon.
+      </div>
+    </div>
+  </div>
+
+  <div class="edu-section" id="education">
+    <div class="edu-title">Pendidikan</div>
+    <div class="edu-list">
+      <div class="edu-item">
+        <div>
+          <div class="edu-major">SMKN 1 Kota Bekasi</div>
+          <div class="edu-school">Rekayasa Perangkat Lunak</div>
+        </div>
+        <div class="edu-date">2023 - Sekarang</div>
+      </div>
+      <div class="edu-item">
+        <div>
+          <div class="edu-major">SMPN 14 Kota Bekasi</div>
+        </div>
+        <div class="edu-date">2020 - 2023</div>
+      </div>
+      <div class="edu-item">
+        <div>
+          <div class="edu-major">SDN Bintara V</div>
+        </div>
+        <div class="edu-date">2014 - 2020</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="skills-section" id="skills">
+    <div class="skills-title">Skill</div>
+    <ul class="skills-list">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>PHP</li>
+      <li>Laravel</li>
+      <li>MySQL</li>
+      <li>Git</li>
+    </ul>
+  </div>
+
+  <div class="project-section" id="projects">
+    <div class="project-title">Project</div>
+    <div class="project-list">
+      <div class="project-card">
+        <div class="proj-title">Aplikasi Skincare Lokal</div>
+        <div class="proj-desc">
+          Aplikasi pengelolaan produk skincare lokal berbasis Laravel dan MySQL.
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="proj-title">Undangan Digital</div>
+        <div class="proj-desc">
+          Aplikasi undangan digital berbasis PHP native dan Laragon, mudah digunakan dan responsif.
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="proj-title">Game Cari Wayang</div>
+        <div class="proj-desc">
+          Game edukasi petualangan di mana pemain membantu Ujang.Jr mencari tiga wayang favoritnya (Arjuna, Antasena, Sadewa) melalui berbagai tantangan untuk mengenal budaya wayang Indonesia.
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
